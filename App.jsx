@@ -1,36 +1,23 @@
 import React from 'react';
-import { View, StyleSheet, Text, Button } from 'react-native';
-import { AirbnbRating, Card, Dialog, Header } from '@rneui/themed';
-
-import LinearGradient from 'react-native-linear-gradient';
-
+import { View, StyleSheet, Text } from 'react-native';
+import { NativeBaseProvider, Box, Center, Square, Circle, Container, Heading } from "native-base";
 
 const App = () => {
   return (
-    <View>
-      <AirbnbRating />
-      <Card>
-        <Text>Word of the Day</Text>
-        <Text h4>be-nev-o=lent</Text>
-        <Text>adjective</Text>
-        <Text>
-          well meaning and kindly.
-         
-          {'"a benevolent smile"'}
-        </Text>
-        <Button title="Learn More">
-          Learn More
-        </Button>
-      </Card>
-      <Header
-        ViewComponent={LinearGradient} // Don't forget this!
-        linearGradientProps={{
-          colors: ['red', 'pink'],
-          start: { x: 0, y: 0.5 },
-          end: { x: 1, y: 0.5 },
-        }}
-      />
-    </View>
+    <NativeBaseProvider>
+      <Center>
+        <Container>
+          <Heading>
+            A component library for the
+            <Text color="emerald.500"> React Ecosystem</Text>
+          </Heading>
+          <Text mt="3" fontWeight="medium">
+            NativeBase is a simple, modular and accessible component library that
+            gives you building blocks to build you React applications.
+          </Text>
+        </Container>
+      </Center>
+    </NativeBaseProvider>
   );
 }
 
